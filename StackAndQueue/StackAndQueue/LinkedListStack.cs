@@ -47,6 +47,7 @@ namespace StackAndQueue
             Console.WriteLine("Value popped is {0}", this.top.data);
             this.top = this.top.next;
         }
+
         internal void Display()
         {
             Node temp = this.top;
