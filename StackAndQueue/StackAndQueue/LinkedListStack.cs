@@ -28,14 +28,34 @@ namespace StackAndQueue
             this.top = node;
             Console.WriteLine("{0} pushed to stack", value);
         }
+        internal void Peek()
+        {
+            if (this.top == null)
+            {
+                Console.WriteLine("stack is empty");
+                return;
+            }
+            Console.WriteLine("{0} is in the top/Peek of the stack", this.top.data);
+        }
+        internal void Pop()
+        {
+            if (this.top == null)
+            {
+                Console.WriteLine("Stack is empty,Deletion is not possible");
+                return;
+            }
+            Console.WriteLine("Value popped is {0}", this.top.data);
+            this.top = this.top.next;
+        }
         internal void Display()
         {
             Node temp = this.top;
             while (temp != null)
             {
-                Console.WriteLine("After Pused to stack " + temp.data + " ");
+                Console.WriteLine(temp.data + " ");
                 temp = temp.next;
             }
         }
+
     }
 }
